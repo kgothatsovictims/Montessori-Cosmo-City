@@ -1,0 +1,728 @@
+ :root {
+      --primary: orange;
+      --secondary: blue;
+      --light: #f8f9fa;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: #fff;
+    }
+
+
+header {
+  background-image: url('./image2.jpg');
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0rem 20px 0rem 0px;
+
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      
+    }
+
+    .nav-links a{
+        color: purple;
+        font-family: "Concert One", sans-serif;
+        font-weight: 400;
+        font-style: normal; 
+    }
+
+     a {
+      font-weight: 500;
+      transition: color 0.3s;
+      text-decoration: none;
+      
+    }
+
+    .nav-links a:hover { color: var(--secondary); }
+
+    .logo{
+      padding-left: 150px;
+        font-family: "Concert One", sans-serif;
+        font-weight: 400;
+        font-style: normal; 
+      font-size: 3rem;
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--secondary);
+      border: 1px var(--secondary) dashed;
+      border-radius: 5px;
+      padding: 0px 7px;
+    }
+
+
+    .hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;      /* ← THIS prevents cropping */
+  display: block;
+}
+
+.intro{
+    text-align: center;
+    background-color: rgb(237, 188, 125);
+    padding: 10px;
+}
+
+h1{
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 3rem;
+}
+.paragraph{
+    font-size: 1.5rem;
+     color: rgb(36, 122, 114);
+}
+
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+      margin: 15px 10px;
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      color: purple;
+      transform: translateY(-3px);
+    }
+
+    .crayons{
+        /* background-color: red; */
+        background-image: url('./crayons2.png');
+        background-size: 350px;
+        height: 100px;
+    }
+
+/* Programs Section */
+.programs {
+    padding: 80px 20px;
+    background-color: #fff; /* or any light color you prefer */
+    text-align: center;
+    background-image: url('./programs-background-image2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.programs h2 {
+    font-family: 'Concert One', cursive;
+    font-size: 2.5rem;
+    color: rgb(209, 4, 209);
+    margin-bottom: 50px;
+}
+
+/* Carousel Container */
+.programs-carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+#programs-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.program-card {
+    min-width: 100%;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    background-color: #f0f8ff; /* light fallback if image fails */
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-family: 'Concert One', cursive;
+    font-size: 1.6rem;
+    color: rgb(41, 149, 138);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Carousel Buttons (mobile only) */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding: 0 10px;
+}
+
+.carousel-btn {
+    pointer-events: all;
+    background: rgba(209, 4, 209, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgb(209, 4, 209);
+    transform: scale(1.15);
+}
+
+.program-btn a{
+    text-decoration: none;
+    color: blue;
+}
+
+.program-btn{
+    width: fit-content;
+    background-color: turquoise;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.program-btn:hover{
+    background-color: rgb(35, 163, 199);
+    color: white;
+}
+
+
+.admission {
+    padding: 100px 20px;
+    background-color: #f8fdff; /* very light blue-ish for a fresh feel */
+    background-image: url('./admission-background5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 35px purple;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: rgb(41, 149, 138);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Concert One', cursive;
+    font-size: 3rem;
+    color: rgb(41, 149, 138);
+    margin-bottom: 60px;
+}
+
+.tuition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.tuition-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.tuition-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-number {
+    font-size: 1.2rem;
+    color: rgb(41, 149, 138);
+    margin-bottom: 15px;
+}
+
+.card-heading {
+    font-family: 'Concert One', cursive;
+    font-size: 2rem;
+    color: rgb(41, 149, 138);
+    margin-bottom: 20px;
+}
+
+.card-desc {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    min-height: 120px; /* keeps cards aligned */
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.tuition-note {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.tuition-note a {
+    background-color: purple;
+    color: white;
+    border-radius: 16px;
+    padding: 7px 14px;
+    position: relative;
+    top: 10px;
+    display: inline-block;
+
+    animation: pulseZoom 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* .tuition-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+} */
+
+.btn-primary {
+    background: rgb(41, 149, 138);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: rgb(209, 4, 209);
+    transform: scale(1.05);
+}
+
+
+.crayons-decor {
+    margin-top: 60px;
+    opacity: 0.6;
+}
+
+.crayons-decor img {
+    max-width: 400px;
+    height: auto;
+}
+
+.about {
+    padding: 100px 20px;
+    background-color: #c8f5f2; /* soft light teal to match the reference */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3));
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    color: white;
+}
+
+.overlay-title {
+    font-family: 'Concert One', cursive;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: rgb(41, 149, 138);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Concert One', cursive;
+    font-size: 3rem;
+    color: rgb(41, 149, 138);
+    margin-bottom: 30px;
+}
+
+.mission-desc {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.btn-outline {
+    align-self: flex-start;
+    padding: 14px 40px;
+    border: 2px solid rgb(41, 149, 138);
+    border-radius: 50px;
+    color: rgb(41, 149, 138);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgb(41, 149, 138);
+    color: white;
+}
+
+
+
+         footer {
+            padding: 80px 20px 40px;
+            color: #333;
+            font-family: 'Georgia', serif; 
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--primary);
+            background-image: url('./footer-background2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* MATCH HTML */
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+
+        .branch {
+            text-align: center;
+        }
+
+        .branch h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: purple ;
+        }
+
+        .branch p {
+            margin: 8px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgb(73, 8, 73);
+        }
+
+        .branch a {
+            color: rgb(142, 15, 142);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .branch a:hover {
+            color: green;
+        }
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+    margin: 30px auto 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-icons a {
+    color: rgb(73, 8, 73);
+    z-index: 1;
+    font-size: 1.9rem; 
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px) scale(1.1);
+    opacity: 0.8;
+}
+
+
+
+        .copyright {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        } 
+
+       .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;  /* Official WhatsApp green */
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;  /* Darker green on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive: Stack on mobile & tablet */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+     
+
+
+    .btn-outline {
+        align-self: center;
+    }
+
+        .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .overlay-title {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop: 3 cards in a row */
+@media (min-width: 768px) {
+    .programs-carousel-container {
+        max-width: none;
+        overflow: visible;
+    }
+
+    #programs-carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        transition: none;
+    }
+
+    .program-card {
+        min-width: auto;
+    }
+
+    .program-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(209, 4, 209, 0.15);
+    }
+
+    /* Hide carousel buttons on desktop */
+    .carousel-controls {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+    
+    .tuition-buttons {
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .branch h3 {
+        font-size: 1.3rem;
+    }
+
+    .branch p,
+    .branch a {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+
+        @media (max-width: 789px) {
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 5px 15px var(--secondary);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .logo{
+      padding-left: 10px;
+    }
+}
